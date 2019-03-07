@@ -1,0 +1,13 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "Cloning Youtube wiht Vanila and NodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Park Sang Eon",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
