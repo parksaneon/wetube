@@ -20,45 +20,51 @@ const VIDEO_DETAIL = "/:id";
 const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = "/:id/delete";
 
+// Github
+const GITHUB = "/auth/github";
+const GITHUB_CALLBACK = "/auth/github/callback";
+
 const routes = {
-    home : HOME,
-    join : JOIN,
-    login : LOGIN,
-    logout : LOGOUT,
-    search : SEARCH,
-    users : USERS,
-    userDatail : (id) => {
-        if(id){
+    home: HOME,
+    join: JOIN,
+    login: LOGIN,
+    logout: LOGOUT,
+    search: SEARCH,
+    users: USERS,
+    userDatail: (id) => {
+        if (id) {
             return `/users/${id}`;
-        }else{
+        } else {
             return USER_DETAIL;
         }
     },
-    editProfile : EDIT_PROFILE,
-    changePassword : CHANGE_PASSWORD,
-    videos : VIDEOS,
-    upload : UPLOAD,
-    videoDetail : (id) => {
-        if(id){
+    editProfile: EDIT_PROFILE,
+    changePassword: CHANGE_PASSWORD,
+    videos: VIDEOS,
+    upload: UPLOAD,
+    videoDetail: (id) => {
+        if (id) {
             return `/videos/${id}`
-        }else{
+        } else {
             return VIDEO_DETAIL;
         }
     },
-    editVideo : (id) => {
-      if(id){
-          return `/videos/${id}/edit`;
-      }else{
-          return EDIT_VIDEO;
-      }  
+    editVideo: (id) => {
+        if (id) {
+            return `/videos/${id}/edit`;
+        } else {
+            return EDIT_VIDEO;
+        }
     },
-    deleteVideo : (id) => {
-        if(id){
+    deleteVideo: (id) => {
+        if (id) {
             return `/videos/${id}/delete`;
-        }else{
+        } else {
             return DELETE_VIDEO;
         }
-    }
+    },
+    gitHub: GITHUB,
+    githubCallback: GITHUB_CALLBACK
 }
 
 export default routes;
